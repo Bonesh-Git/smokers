@@ -1,0 +1,82 @@
+
+header > auth-token
+
+===========================================
+===============v   transaction   v=========
+===========================================
+
+http://127.0.0.1:8080/api/v1/tran/list
+
+http://127.0.0.1:8080/api/v1/tran/transfer
+{
+    "destinationUsername":"B",
+    "amount":"500"
+}
+
+
+
+http://127.0.0.1:8080/api/v1/tran/withdraw
+{
+    "amount":"500"
+}
+
+
+
+http://127.0.0.1:8080/api/v1/tran/deposit
+{
+    "amount":"500"
+}
+
+===========================================
+===============v   user   v================
+===========================================
+
+http://127.0.0.1:8080/api/v1/user/register
+http://127.0.0.1:8080/api/v1/user/registerAsAnAdmin
+{
+    "username":"A",
+    "password":"1234",
+    "fullName":"Alaki",
+    "mobileNumber":"+989"
+}
+
+
+
+http://127.0.0.1:8080/api/v1/user/login
+{
+    "username":"A",
+    "password":"1234"
+}
+
+
+
+http://127.0.0.1:8080/api/v1/user/logout
+
+
+
+http://127.0.0.1:8080/api/v1/user/modify
+{
+    "username":"A",
+    "user":{
+        "username":"A2",
+        "password":"1234",
+        "fullName":"Alaki2",
+        "mobileNumber":"+9890",
+        "address":"earth",
+        "email":"AMail@email.com"
+    }
+}
+
+===========================================
+===============v   wallet   v==============
+===========================================
+
+http://127.0.0.1:8080/api/v1/wallet/balance
+
+
+
+http://127.0.0.1:8080/api/v1/wallet/modify
+{
+    "username":"A",
+    "status":"BLOCKED"
+}
